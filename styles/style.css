@@ -182,6 +182,11 @@
   cursor: pointer;
 }
 
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent-color, #000);
+  outline-offset: -2px;
+}
+
 .card__like-button {
   position: relative;
   background-color: transparent;
@@ -213,5 +218,31 @@
   background: var(--background-color, #FFF);
   padding: 15px 20px;
   cursor: pointer;
+}
+
+.button {
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  background-color: var(--background-color-difference);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  mix-blend-mode: difference;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
 }
 
