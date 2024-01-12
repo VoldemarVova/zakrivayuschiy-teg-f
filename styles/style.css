@@ -246,3 +246,93 @@
   transform: scaleX(1);
 }
 
+.sparks {
+  opacity: 0;
+}
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s 0.05s linear;
+}
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .core {
+  fill: var(--accent-color);
+  transition-delay: unset;
+}
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  transition-delay: 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--red--color);
+  transition-delay: unset;
+}
+.like-icon:active .main-body {
+  fill: var(--red--color);
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked {
+  fill: transparent;
+  transition: fill 0.1s linear;
+}
+
+.like-icon.is-liked .core{
+  fill: var(--red--color);
+  transition-delay: unset;
+}
+
+.like-icon.is-liked .main-body{
+  fill: var(--red--color);
+  transition-delay: 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--red--color);
+  transition-delay: 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  animation: scaling 0.3s 0.1s ease-in reverse;
+  transform-origin: center;
+}
+
+.like-icon.is-liked .sparks {
+  animation: opacity-sparks 0.3s 0.3s ease-in reverse;
+}
+
+.dialog {
+  display: block;
+  width: clamp(341px, 20.9609rem + 1.5023vw, 357px);
+  font-family: var(--font-PressStart2P);
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+}
+
+.dialog:not([open]) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dialog-title {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+
+.button-dialog {
+  width: clamp(257px, 20.9609rem + 1.5023vw, 293px);
+  padding: 9px 17px;
+}
+
+.dialog-modal {
+  font-size: inherit;
+}
