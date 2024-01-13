@@ -307,11 +307,16 @@
 }
 
 .dialog {
-  display: block;
-  width: clamp(341px, 20.9609rem + 1.5023vw, 357px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: clamp(345px, 50vw, 356px);
+  min-height: 193px;
+  background: var(--background-color);
+  border: 2px solid var(--accent-color);
+  padding: 30px;
   font-family: var(--font-PressStart2P);
-  font-size: 14px;
-  line-height: 150%;
   font-weight: var(--font-weight-normal);
   text-transform: uppercase;
 }
@@ -323,16 +328,42 @@
 
 .dialog-title {
   display: flex;
+  flex-direction: row;
   gap: 20px;
-  font-size: 14px;
+  align-items: center;
+  color: var(--accent-color);
 }
 
-
 .button-dialog {
-  width: clamp(257px, 20.9609rem + 1.5023vw, 293px);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 38px;
   padding: 9px 17px;
 }
 
 .dialog-modal {
-  font-size: inherit;
+  width: clamp(198px, 50vw, 234px);
+  font-size: 14px;
+  font-weight: var(--font-weight-normal);
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
+dialog::backdrop {
+  background-color: var(--background-color);
+  opacity: 0.75;
+  backdrop-filter: blur(5px);
+}
+
+.brightness {
+  filter: brightness(150%);
+}
+
+.contrast {
+  filter: contrast(50%);
+}
+
+.blur {
+  filter: blur(0.1rem);
 }
