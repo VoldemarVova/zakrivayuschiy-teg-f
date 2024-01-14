@@ -325,7 +325,6 @@
 }
 
 .dialog {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 30px;
@@ -343,6 +342,10 @@
 .dialog:not([open]) {
   opacity: 0;
   pointer-events: none;
+}
+
+.dialog[open] {
+  display: flex;
 }
 
 .dialog-title {
