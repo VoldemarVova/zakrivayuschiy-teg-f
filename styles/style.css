@@ -155,14 +155,17 @@
   right: 25px;
   font-family: var(--font-PressStart2P);
   font-size: 14px;
-  text-transform: uppercase;
   text-shadow: 0 0 1px var(--background-color);
   color: var(--accent-color);
   mix-blend-mode: hard-light;
-  /*opacity: 0.5;*/
 }
 
-@supports () {
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
 }
 
 .main-card-button {
@@ -319,6 +322,7 @@
   font-family: var(--font-PressStart2P);
   font-weight: var(--font-weight-normal);
   text-transform: uppercase;
+  position: fixed;
 }
 
 .dialog:not([open]) {
@@ -366,4 +370,20 @@ dialog::backdrop {
 
 .blur {
   filter: blur(0.1rem);
+}
+
+.opacity {
+  filter: opacity(0.8);
+}
+
+.grayscale {
+  filter: grayscale(0.8);
+}
+
+.sepia {
+  filter: sepia(80%);
+}
+
+.mix {
+  filter: saturate(200%) blur(0.1rem);
 }
