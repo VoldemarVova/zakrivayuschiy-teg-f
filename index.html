@@ -269,23 +269,22 @@
         <span class="button__text">Сохранить на память</span>
       </button>
     <dialog class="dialog" id="save-floppy">
-      <form method="dialog">
         <div class="dialog-title">
           <svg width="39" height="39" viewBox="0 0 39 39" fill="red">
             <use href="svg/floppy.svg#floppy"></use>
           </svg>
           <h2 class="dialog-modal">Вставьте дискету, чтобы продолжить</h2>
         </div>
-        <button class="footer-card-button button button-dialog"
-                type="button"
-                onclick="window['save-floppy'].close();"
-                aria-controls="save-floppy">
-          <span class="button__text">ок</span>
-        </button>
-      </form>
+        <form method="dialog">
+          <button class="footer-card-button button button-dialog"
+                  type="button"
+                  onclick="window['save-floppy'].close();"
+                  aria-controls="save-floppy">
+            <span class="button__text">ок</span>
+          </button>
+        </form>
     </dialog>
     </footer>
-
     <script src="./scripts/like.js"></script>
   </body>
 </html>
